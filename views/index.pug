@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  p message: #{message.url}
+  //- p user.name: #{user.name}
+  //- p user.email: #{user.email}
+  //- p user.website: #{user.website}
+  form(action="/upload", method="post", enctype="multipart/form-data")
+        input(type="text", name="title")
+        //- input(type="file", multiple, name="image")
+        button(type="submit", value="Search") Search
+        //- <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Bukalapak_logo.svg" alt="My_Logo">
